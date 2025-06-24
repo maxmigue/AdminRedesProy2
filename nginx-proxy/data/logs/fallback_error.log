@@ -1,0 +1,10 @@
+2025/06/19 01:45:23 [error] 182#182: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: nginxproxymanager, request: "GET /api/ HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "localhost:81", referrer: "http://localhost:81/nginx/proxy"
+2025/06/24 23:49:52 [alert] 158#158: worker process 188 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: worker process 190 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: worker process 191 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: worker process 192 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: worker process 193 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: worker process 194 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: worker process 195 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: cache manager process 196 exited on signal 9
+2025/06/24 23:49:52 [alert] 158#158: worker process 189 exited on signal 9

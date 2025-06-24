@@ -1,0 +1,37 @@
+services:
+  npm:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: npm
+    restart: always
+    ports:
+      - "80:80"
+      - "81:81"    
+      - "443:443"
+    volumes:
+      - ./nginx-proxy/data:/data
+      - ./nginx-proxy/letsencrypt:/etc/letsencrypt
+    networks:
+      - nginx-proxy
+
+  userapp:
+    build: ./user-service
+    container_name: userapp
+    restart: always
+    volumes:
+      - ./user-service:/app  
+    networks:
+      - nginx-proxy
+
+  taskapp:
+    build: ./task-service
+    container_name: taskapp
+    restart: always
+    volumes:
+      - ./task-service:/app  
+    networks:
+      - nginx-proxy
+
+
+networks:
+  nginx-proxy:
+    driver: bridge
